@@ -30,11 +30,7 @@ app.use('/assets', express.static('assets')); // 정적 파일 서빙
 // CORS 설정
 app.use(
   cors({
-    origin: [
-      process.env.FRONT_ADDRESS,
-      process.env.FRONT_ADDRESS_DEPLOY,
-      // 'http://52.78.209.124:3000',
-    ],
+    origin: [process.env.FRONT_ADDRESS, process.env.FRONT_ADDRESS_DEPLOY],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
   })
